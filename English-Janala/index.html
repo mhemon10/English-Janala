@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/2f2e6479ad.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <style>
+        .poppins {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .tiro-bangla {
+            font-family: "Tiro Bangla", serif;
+        }
+
+        .hind-siliguri {
+            font-family: "Hind Siliguri", sans-serif;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+        }
+
+        .active {
+            background-color: #422AD5;
+            color: white;
+        }
+
+        .hider {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .hide {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="bg-[#BABEC4] fixed top-0 w-full z-50 hidejs hidden">
+            <div class="w-11/12 mx-auto flex justify-between items-center py-4">
+                <a href="#">
+                    <div class="flex items-center gap-0.5">
+                        <h1 class="poppins text-xl font-semibold">English</h1>
+                        <img src="assets/logo.png" alt="logo">
+                        <h1 class="tiro-bangla text-xl">জানালা</h1>
+                    </div>
+                </a>
+                <i class="fa-solid fa-bars text-xl hide" id="nav-menu"></i>
+                <i class="fa-solid fa-xmark hider text-xl" id="nav-close"></i>
+                <div class="flex max-md:rounded-lg items-center gap-2 max-md:hidden max-md:absolute max-md:top-16 max-md:bg-[#BABEC4] max-md:p-4 max-md:right-0 max-md:flex-col"
+                    id="nav-links">
+                    <a href="#faq-section">
+                        <button
+                            class="poppins text-sm font-semibold text-[#422AD5] px-4 py-3 border border-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white cursor-pointer"><i
+                                class="fa-solid fa-circle-question"></i> FAQ</button>
+                    </a>
+                    <a href="#lesson-section">
+                        <button
+                            class="poppins text-sm font-semibold text-[#422AD5] px-4 py-3 border border-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white cursor-pointer"><i
+                                class="fa-solid fa-book-open"></i> Learn</button>
+                    </a>
+                    <button id="logout"
+                        class="poppins text-sm font-semibold text-[#422AD5] px-4 py-3 border border-[#422AD5] rounded-md hover:bg-[#422AD5] hover:text-white cursor-pointer"><i
+                            class="fa-solid fa-right-from-bracket"></i> LogOut</button>
+                </div>
+            </div>
+        </nav>
+        <div class="w-11/12 mx-auto flex max-md:flex-col justify-between items-center pt-16" id="hero-section">
+            <img src="assets/hero-student.png" alt="hero-student" class="md:hidden">
+            <div class="max-w-screen-md max-md:text-center">
+                <h1 class="text-[40px] font-bold poppins"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                <p class="hind-siliguri text-2xl font-medium mt-6 text-[#18181B80]">আজ থেকেই আপনার ভাষা শেখার যাত্রা
+                    শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+                    যাবে অন্য একটি Level এ</p>
+                <div class="flex flex-col gap-5 mt-10">
+                    <input type="text" name="name" id="username" placeholder="Enter Your Name"
+                        class=" max-md:w-full poppins py-2 px-2 border-[#18181B20] rounded-md w-2/5">
+                    <input type="password" id="pass" placeholder="Enter Your Pin (123456)"
+                        class="max-md:w-full py-1.5 px-2 poppins border-[#18181B20] rounded-md w-2/5">
+                </div>
+                <button class="px-4 py-3 rounded-md bg-[#422AD5] text-white mt-5 poppins max-md:mb-4" id="login">Get
+                    Started</button>
+            </div>
+            <img src="assets/hero-student.png" alt="hero-student" class="max-sm:hidden">
+        </div>
+    </header>
+    <section class="mt-8 w-11/12 mx-auto pt-20 hidejs hidden" id="lesson-section">
+        <h1 class="text-4xl font-bold text-[#18181B] text-center mb-9 poppins"><span class="text-[#00BCFF]">Let's</span>
+            Learn Vocabularies</h1>
+        <div class="flex justify-center items-center md:gap-5 mb-10 max-md:grid max-md:grid-cols-3 max-md:gap-2"
+            id="lesson-btn-box">
+
+        </div>
+        <div class="justify-center hidden" id="loader">
+            <span class="loading loading-dots loading-xl"></span>
+        </div>
+        <div class="bg-[#F8F8F8] rounded-3xl max-md:grid-cols-1 max-md:text-center w-full grid gap-5 grid-cols-3 p-7"
+            id="lesson-box">
+            <div class="text-center py-16 col-span-full">
+                <h4 class="hind-siliguri text-[#18181B80]">আপনি এখনো কোন Lesson Select করেন ন</h4>
+                <h2 class="hind-siloguri text-4xl font-medium mt-3">একটি <span class="font-bold">Lesson Select</span>
+                    করুন।</h2>
+            </div>
+        </div>
+    </section>
+    <dialog id="word_details" class="modal">
+        <div class="modal-box">
+
+        </div>
+    </dialog>
+    <section class="w-11/12 mx-auto mt-32 mb-72 pt-20 hidejs hidden" id="faq-section">
+        <h1 class="text-4xl font-bold text-center mb-20"><span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h1>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-2">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold poppins">What is the difference between var, let, and const?</div>
+            <div class="collapse-content text-sm poppins">Var: Declares the Variable in Global Scope. <br> let: Declares
+                the variable in block scope. <br> const: Declares block scoped but the value cannot be changed after
+                assigned.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-2">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold poppins">What is the difference between map(), forEach(), and
+                filter()?</div>
+            <div class="collapse-content text-sm poppins">Map:Transform data and return a new array  <br>ForEach: Just loop through the array without returning anything <br>Filer:Filter elements that meet a condition </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-2">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold poppins">What are arrow functions and how they are different from
+                regular functions?</div>
+            <div class="collapse-content text-sm poppins">It is an alternative of regular functions and it different by
+                its declaration it is declared like (test)=>{}. Regular functions are declared with the function
+                keyword.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-2">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold poppins">How do JavaScript Promises work?</div>
+            <div class="collapse-content text-sm poppins">A Promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-2">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold poppins">How does closures work in JavaScript?</div>
+            <div class="collapse-content text-sm poppins">A closure in JavaScript is when a function has access to variables from its outer (parent) function even after the parent function has finished executing.
+
+            </div>
+        </div>
+    </section>
+    <footer
+        class="border-t-[#FFEBEB] border-t-2 md:py-24 md:px-20 max-md:py-12 max-md:px-10 flex justify-between max-md:flex-col max-md:gap-10 mt-5">
+        <div class="">
+            <div class="flex items-center gap-0.5 mb-5">
+                <h1 class="poppins text-xl font-semibold">English</h1>
+                <img src="assets/logo.png" alt="logo">
+                <h1 class="tiro-bangla text-xl">জানালা</h1>
+            </div>
+            <p class="hind-siliguri text-xl font-medium mb-2">ইংরেজি শিখুন সহজে</p>
+            <p class="hind-siliguri ">Providing ED-Tech Applications since 2025</p>
+        </div>
+        <div class="md:self-end max-md:self-center">
+            <p class="text-sm font-semibold mb-4">Follow us</p>
+            <div class="flex gap-3">
+                <i class="fa-brands text-3xl fa-facebook hover:text-blue-500 cursor-pointer"></i>
+                <i class="fa-brands text-3xl fa-youtube hover:text-red-600 cursor-pointer"></i>
+                <i class="fa-brands text-3xl fa-square-instagram hover:text-pink-500 cursor-pointer"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
